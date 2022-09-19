@@ -1,19 +1,21 @@
 function liburuakBistaratu() {
-  let liburuak = new Array();
-  liburuak.push(new Liburua("La edad de la ira", "Nando Lopez", true));
-  liburuak.push(new Liburua("Violeta", "Isabel Allende", false));
+  let liburu1={tituloa: "La edad de la ira", autorea: "Nando Lopez", irakurrita:true};
+  
+  let liburu2={tituloa: "Violeta", autorea: "Isabel Allende", irakurrita:false};
 
-  for (var i =0;i<liburuak.length();i++){
-    
-    
-    alert(
-        "Liburuaren izena: " +
-          liburuak[i] +
-          ", autorea: " +
-          liburuak[i].autorea +
-          ", irakurrita: " +
-          irakurrita
-      );
+  let liburuak = new Array();
+  liburuak.push(liburu1);
+  liburuak.push(liburu2);
+
+  for (var i =0;i<liburuak.length;i++){
+    if(liburuak[i].irakurrita==true){
+      alert("Liburu hau irakurrita daukazu: "+
+          liburuak[i].tituloa + " - " +
+          liburuak[i].autorea );
+    }else{
+      alert("Liburu hau irakurri behar duzu: "+
+      liburuak[i].tituloa + " - " +
+      liburuak[i].autorea );
+    }
   }
-  /* */
 }
