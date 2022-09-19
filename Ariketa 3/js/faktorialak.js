@@ -1,9 +1,9 @@
 function faktorialaKalkulatu() {
-  let zenbakia = "a";
+  let zenbakia = 0;
 
-  while (isNaN(zenbakia)) {
+  do {
     zenbakia = parseInt(prompt("Zer zenbakiren faktoriala nahi duzu? "));
-  }
+  } while (isNaN(zenbakia) || Number(zenbakia) < 0);
 
   let faktoriala = 1;
 
