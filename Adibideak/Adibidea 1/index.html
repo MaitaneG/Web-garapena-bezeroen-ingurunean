@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adibidea 1</title>
+  </head>
+  <body>
+    <h3 id="intro">Introducción</h3>
+    <script>
+      var nodo = document.getElementById("intro");
+      nodo.style.color = "red";
+      nodo.onmouseover = function () {
+        this.style.color = "blue";
+      };
+      nodo.onmouseout = function () {
+        this.style.color = "red";
+      };
+      
+    </script>
+    <img src="homer.gif" id="img1" />
+    <script>
+      setTimeout("document.getElementById('img1').src='gifanimado.gif'", 3000);
+    </script>
+  </body>
+</html>
