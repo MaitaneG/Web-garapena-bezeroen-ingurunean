@@ -16,7 +16,7 @@
     <div class="col-sm-6">
       <h1>DAW klasea</h1>
       <h3>Formularioak eta JavaScript</h3>
-      <form class="form-horizontal" id="formularioa" onsubmit="return false" onreset="">
+      <form class="form-horizontal" id="formularioa" onsubmit="return false">
         <div class="form-group">
           <div class="radio">
             <label class="control-label" for="gender">Zuzentzeko era: </label>
@@ -56,8 +56,8 @@
           <div class="col-sm-offset-2 col-sm-10">
             <div class="checkbox">
               <label class="control-label">Gustokoenak: </label>
-              <label><input type="checkbox" name="liburuak" />Liburuak</label>
-              <label><input type="checkbox" name="pelikulak" />Pelikulak</label>
+              <label><input type="checkbox" id="liburuak" name="liburuak" />Liburuak</label>
+              <label><input type="checkbox" id="pelikulak" name="pelikulak" />Pelikulak</label>
             </div>
           </div>
         </div>
@@ -65,7 +65,7 @@
         <div class="form-group">
           <div class="col-sm-offset-2 col-sm-10">
             <button type="submit"  class="btn btn-info" id="bidali" onclick="bidaliInfor()">Bidali</button>
-            <button type="reset" class="btn btn-default" id="ezeztatu">Ezeztatu</button>
+            <button type="reset" class="btn btn-default" id="ezeztatu" onclick="ezabatu()">Ezeztatu</button>
           </div>
         </div>
       </form>
@@ -75,8 +75,10 @@
         <h3>Sartu dituzun datuak: </h3>
         <p id="sartuIzena"></p>
         <p id="sartuAbizena"></p>
+        <p id="sartuGeneroa"></p>
         <p id="sartuHelbidea"></p>
         <p id="sartuHerrialdea"></p>
+        <p id="sartuGustokoena"></p>
     </div>
   </body>
 
