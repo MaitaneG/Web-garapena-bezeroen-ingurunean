@@ -1,4 +1,4 @@
-function bidali() {
+function bidaliInfor() {
   let radioAnderea = document.getElementById("anderea");
 
   if (radioAnderea.checked) {
@@ -25,10 +25,10 @@ function bidali() {
     let helbideaIda = document.getElementById("sartuHelbidea");
     let herrialdeaIda = document.getElementById("sartuHerrialdea");
 
-    izenaIda.textContent = izena.value.trim();
-    abizenaIda.textContent = abizena.value.trim();
-    helbideaIda.textContent = helbidea.value.trim();
-    herrialdeaIda.textContent = herrialdea.value.trim();
+    izenaIda.textContent = "Izena: "+izena.value.trim();
+    abizenaIda.textContent = "Abizena: "+abizena.value.trim();
+    helbideaIda.textContent = "Helbidea: "+helbidea.value.trim();
+    herrialdeaIda.textContent = "Herrialdea: "+herrialdea.value.trim();
   }
   return false;
 }

@@ -16,7 +16,7 @@
     <div class="col-sm-6">
       <h1>DAW klasea</h1>
       <h3>Formularioak eta JavaScript</h3>
-      <form class="form-horizontal" id="formularioa" onsubmit="bidali()">
+      <form class="form-horizontal" id="formularioa" onsubmit="return false">
         <div class="form-group">
           <div class="radio">
             <label class="control-label" for="gender">Zuzentzeko era: </label>
@@ -64,7 +64,7 @@
 
         <div class="form-group">
           <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit"  class="btn btn-info" id="bidali">Bidali</button>
+            <button type="submit"  class="btn btn-info" id="bidali" onclick="bidaliInfor()">Bidali</button>
             <button class="btn btn-default" id="ezeztatu">Ezeztatu</button>
           </div>
         </div>
