@@ -5,12 +5,14 @@ var argazkiak = [
   "img/saludo4.jpg",
 ];
 
-var gehituGabekoArgazkiak=[];
+var gehituGabekoArgazkiak = [];
 
 window.onload = function () {
   document
     .getElementById("argIgo")
     .addEventListener("click", ateraArgazkia, false);
+
+  gehituGabekoArgazkiak = argazkiak;
 };
 
 function ateraArgazkia() {
@@ -18,9 +20,16 @@ function ateraArgazkia() {
 
   if (argazki.length < 4) {
     var irudia = document.createElement("img");
-    irudia.src = argazkiak[0];
+    irudia.src = gehituGabekoArgazkiak[0];
+    irudia.addEventListener("dblclick", argazkiaEzabatu, false);
     document.body.appendChild(irudia);
-  }else{
+    gehituGabekoArgazkiak.shift();
+  } else {
     alert("Ezin duzu argazki gehiago gehitu");
   }
+}
+
+function argazkiaEzabatu() {
+    gehituGabekoArgazkiak.push(this.src)
+  document.body.removeChild(this);
 }
