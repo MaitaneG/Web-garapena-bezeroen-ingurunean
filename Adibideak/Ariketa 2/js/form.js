@@ -54,7 +54,7 @@ function ezabatu() {
   let izenaIda = document.getElementById("sartuIzena");
   let abizenaIda = document.getElementById("sartuAbizena");
   let helbideaIda = document.getElementById("sartuHelbidea");
-  let herrialdeaIda = document.getElementById("sartuHerrialdea");
+  let probintziaIda = document.getElementById("sartuProbintzia");
   let generoaIda = document.getElementById("sartuGeneroa");
   let gustokoenaIda = document.getElementById("sartuGustokoena");
 
@@ -63,6 +63,7 @@ function ezabatu() {
   helbideaIda.textContent="";
   generoaIda.textContent="";
   gustokoenaIda.textContent="";
+  probintziaIda.textContent="";
 }
 
 function argazkiaAldatu() {
