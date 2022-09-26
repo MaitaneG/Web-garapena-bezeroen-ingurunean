@@ -19,7 +19,7 @@ function bidaliInfor() {
   if (
     izena.value.trim() == "" ||
     abizena.value.trim() == "" ||
-    helbidea.value.trim() == "" 
+    helbidea.value.trim() == ""
   ) {
     alert("Datu guztiak bete behar dira");
   } else if (liburuak.checked || pelikulak.checked) {
@@ -58,20 +58,29 @@ function ezabatu() {
   let generoaIda = document.getElementById("sartuGeneroa");
   let gustokoenaIda = document.getElementById("sartuGustokoena");
 
-  izenaIda.textContent="";
-  abizenaIda.textContent="";
-  helbideaIda.textContent="";
-  generoaIda.textContent="";
-  gustokoenaIda.textContent="";
-  probintziaIda.textContent="";
+  izenaIda.textContent = "";
+  abizenaIda.textContent = "";
+  helbideaIda.textContent = "";
+  generoaIda.textContent = "";
+  gustokoenaIda.textContent = "";
+  probintziaIda.textContent = "";
 }
 
-function aldatuJauna(){
+function aldatuJauna() {
   let argazkia = document.getElementById("arg");
   argazkia.src = "img/caraHombre.jpg";
 }
 
-function aldatuAnderea(){
+function aldatuAnderea() {
   let argazkia = document.getElementById("arg");
   argazkia.src = "img/caraMujer.jpg";
 }
+
+window.onload = function () {
+  document
+    .getElementById("jauna")
+    .addEventListener("click", aldatuJauna, false);
+  document
+    .getElementById("anderea")
+    .addEventListener("click", aldatuAnderea, false);
+};
