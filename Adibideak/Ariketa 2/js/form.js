@@ -66,16 +66,12 @@ function ezabatu() {
   probintziaIda.textContent="";
 }
 
-function argazkiaAldatu() {
+function aldatuJauna(){
   let argazkia = document.getElementById("arg");
-  let radioJauna = document.getElementById("jauna");
-  let radioAnderea = document.getElementById("anderea");
+  argazkia.src = "img/caraHombre.jpg";
+}
 
-  radioJauna.onclick = function () {
-    argazkia.src = "img/caraHombre.jpg";
-  };
-
-  radioAnderea.onclick = function () {
-    argazkia.src = "img/caraMujer.jpg";
-  };
+function aldatuAnderea(){
+  let argazkia = document.getElementById("arg");
+  argazkia.src = "img/caraMujer.jpg";
 }

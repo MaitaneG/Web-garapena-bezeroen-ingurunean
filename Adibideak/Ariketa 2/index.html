@@ -22,8 +22,8 @@
           <div class="form-group">
             <div class="radio">
               <label class="control-label" for="gender">Zuzentzeko era: </label>
-              <label><input type="radio" name="gender" id="jauna" value="jauna" checked />Jauna</label>
-              <label><input type="radio" name="gender" id="anderea" value="anderea"/>Anderea</label>
+              <label><input type="radio" name="gender" id="jauna" value="jauna" onclick="aldatuJauna()" checked/>Jauna</label>
+              <label><input type="radio" name="gender" id="anderea" value="anderea" onclick="aldatuAnderea()"/>Anderea</label>
             </div>
           </div>
           <br/>
@@ -95,8 +95,4 @@
       </div>
     </div>
   </body>
-
-  <script>
-    argazkiaAldatu();
-  </script>
 </html>
