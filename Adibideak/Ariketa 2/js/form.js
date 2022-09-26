@@ -12,22 +12,21 @@ function bidaliInfor() {
   let izena = document.getElementById("izena");
   let abizena = document.getElementById("abizena");
   let helbidea = document.getElementById("helbidea");
-  let herrialdea = document.getElementById("herrialdea");
+  let probintzia = document.getElementById("probintzia");
   let liburuak = document.getElementById("liburuak");
   let pelikulak = document.getElementById("pelikulak");
 
   if (
     izena.value.trim() == "" ||
     abizena.value.trim() == "" ||
-    helbidea.value.trim() == "" ||
-    herrialdea.value.trim() == ""
+    helbidea.value.trim() == "" 
   ) {
     alert("Datu guztiak bete behar dira");
   } else if (liburuak.checked || pelikulak.checked) {
     let izenaIda = document.getElementById("sartuIzena");
     let abizenaIda = document.getElementById("sartuAbizena");
     let helbideaIda = document.getElementById("sartuHelbidea");
-    let herrialdeaIda = document.getElementById("sartuHerrialdea");
+    let probintziaIda = document.getElementById("sartuProbintzia");
     let generoaIda = document.getElementById("sartuGeneroa");
 
     let gustokoenaIda = document.getElementById("sartuGustokoena");
@@ -43,7 +42,7 @@ function bidaliInfor() {
     izenaIda.textContent = "Izena: " + izena.value.trim();
     abizenaIda.textContent = "Abizena: " + abizena.value.trim();
     helbideaIda.textContent = "Helbidea: " + helbidea.value.trim();
-    herrialdeaIda.textContent = "Herrialdea: " + herrialdea.value.trim();
+    probintziaIda.textContent = "Probintzia: " + probintzia.value.trim();
     generoaIda.textContent = "Generoa: " + gender;
   } else {
     alert("Gutxienez gustoko bat aukeratu behar duzu.");
@@ -62,7 +61,6 @@ function ezabatu() {
   izenaIda.textContent="";
   abizenaIda.textContent="";
   helbideaIda.textContent="";
-  herrialdeaIda.textContent="";
   generoaIda.textContent="";
   gustokoenaIda.textContent="";
 }
