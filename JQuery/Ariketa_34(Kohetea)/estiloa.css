@@ -1,0 +1,10 @@
+body{
+    background-image: url("img/spacestars.jpg");
+    background-repeat: repeat;
+}
+
+img{
+    position:relative; 
+    left:50%;
+    top:0;
+}
