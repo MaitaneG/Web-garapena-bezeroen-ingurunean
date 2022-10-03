@@ -1,4 +1,4 @@
-$(document).ready(function () {
+/*$(document).ready(function () {
   $("#clickme").click(function () {
     $("#book").animate(
       {
@@ -12,4 +12,14 @@ $(document).ready(function () {
       }
     );
   });
-});
+});*/
+
+$( "#clickme" ).click(function() {
+    $( "#book" ).animate({
+      width: [ "toggle", "swing" ],
+      height: [ "toggle", "swing" ],
+      opacity: "toggle"
+    }, 5000, "linear", function() {
+      $( this ).after( "<div>Animation complete.</div>" );
+    });
+  });
