@@ -1,0 +1,32 @@
+.zentratu {
+  width: 20%;
+  margin: 0 auto;
+  text-align: center;
+  border:1px solid black;
+}
+
+.botoiak{
+  width:40%;
+  height:40px;
+  background-color:brown;
+  font-size: medium;
+  margin: 0 auto;
+  border-radius: 20px;
+  color: white;
+  line-height: 35px;
+}
+
+.atzera{
+  float: left;
+  margin-left: 7%;
+}
+
+.aurrera{
+  float: right;
+  margin-right: 7%;
+}
+
+.argazkia{
+  width:90%;
+  
+}
