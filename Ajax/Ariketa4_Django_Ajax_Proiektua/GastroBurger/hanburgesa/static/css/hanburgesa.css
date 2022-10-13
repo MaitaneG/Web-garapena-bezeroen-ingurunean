@@ -1,0 +1,37 @@
+h1{
+    text-align: center;
+    color:crimson;
+}
+
+a{
+    color: red;
+    text-decoration: none;
+}
+
+.margin-top{
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+.margin-left{
+    margin-left: 100px;
+}
+
+.hasierako-pantaila{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100vh;;
+}
+html body{
+    height:100vh;
+}
+.pepe:hover{
+    box-shadow: 10px 10px black;
+}
+
+.behera{
+    position: relative;
+    top:200px;
+    left: 90%;
+}

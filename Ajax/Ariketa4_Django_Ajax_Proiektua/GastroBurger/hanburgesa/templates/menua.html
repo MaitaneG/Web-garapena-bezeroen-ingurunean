@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+  {% block title %}Menua{% endblock %}
+  {% block page_content %}
+    <nav class="navbar navbar-light fixed-top bg-dark">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1"><h1>Gastro Burger</h1></span>
+        <a class="btn btn-danger" href="add/">Gehitu Hanburgesa</a>
+      </div>
+    </nav>
+    
+    <div class="container margin-top">
+      <a class="btn btn-danger " href="#footer">Eskaria ikusi</a>
+
+      <div class="row d-flex justify-content-center">
+        {% for hanbur in hanburgesa %}
+        <!--onclick="alert('Karritora gehituta\n\n{{hanbur.izena}}-a karritora gehitu da')"-->
+        <div class="card m-4 pepe" style="width: 18rem">
+          <div class="d-flex">
+            <a href="addcart/{{hanbur.id}}" class="mt-1 ms-3 justify-content-start w-auto"><iconify-icon icon="carbon:shopping-cart-plus" class="text-danger"></iconify-icon></a>
+            <div class="margin-left">
+              <a class="w-auto text-danger ms-5" href="update/{{hanbur.id}}"
+                >Aldatu</a
+              >
+              <a class="w-auto text-danger mx-2" href="delete/{{hanbur.id}}/"
+                >X</a
+              >
+            </div>
+          </div>
+          
+          <div class="card-body">
+            <h5 class="card-title text-dark">{{hanbur.izena}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{hanbur.prezioa}} €</h6>
+            <p class="card-text">{{hanbur.deskribapena}}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <footer id="footer" class="bg-dark text-danger p-4">
+      <div class="row">
+        <h5>Zure eskaria: </h5>
+        {% for kar in karritoa%}
+          <div class="d-flex flex-row justify-content-evenly">
+            <p>{{ kar.id_hanburgesa }}</p>
+            <p>{{kar.kantitatea}}</p>
+            <a href="cartamountminus/{{kar.id}}">-</a>
+            <a href="cartamountplus/{{kar.id}}">+</a>
+            <a href="deletecart/{{kar.id}}">X</a>
+          </div>
+        {% endfor %}
+      </div>
+      <a id="erosketa_egin" href="buy/"><button class="btn btn-danger text-white">EROSI</button></a>
+    </footer>
+    {% endblock page_content%}
+    
+    {% block javascript %}
+    <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+    {% endblock javascript %}

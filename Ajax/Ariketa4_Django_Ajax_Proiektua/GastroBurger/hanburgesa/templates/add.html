@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+  {% block title %}Hanburgesa gehitu{% endblock %}
+  {% block page_content %}
+    <nav class="navbar navbar-light fixed-top bg-dark">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1"><h1>Gastro Burger</h1></span>
+        <a class="btn btn-danger" href="add/">Gehitu Hanburgesa</a>
+      </div>
+    </nav>
+
+    <div class="margin-top container">
+      <h1>Gehitu hanburgesa</h1>
+      <form action="addrecord/" method="post">
+        {% csrf_token %} <label class="form-label">Hanburgesaren izena:</label>
+        <input type="text" name="izena" class="form-control" required/>
+        <br /><br />
+        <label class="form-label">Hanburgesaren deskribapena:</label>
+        <input type="text" name="deskribapena" class="form-control" required/>
+        <br/><br/>
+        <label class="form-label">Hanburgesaren prezioa:</label>
+        <input type="number" step="0.01" min="0" name="prezioa" class="form-control" required/>
+        <br/><br/>
+        <input class="btn btn-dark" type="submit" value="Submit" />
+      </form>
+    </div>
+    {% endblock page_content%}
