@@ -58,10 +58,10 @@ def addcart(request, id):
         for kar in karritoa:
             if kar.id_hanburgesa == hanburgesa:
                 kar.kantitatea = kar.kantitatea + 1
-                kar.save()
             else:
-                kar =Karritoa(id_hanburgesa=hanburgesa,kantitatea=1)
-                kar.save()
+                kar = Karritoa(id_hanburgesa=hanburgesa,kantitatea=1)
+            
+        kar.save()
     else:
         karri= Karritoa(id_hanburgesa=hanburgesa,kantitatea=1)
         karri.save()
