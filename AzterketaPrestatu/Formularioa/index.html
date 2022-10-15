@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form class="border mt-4 p-3">
+            <div class="form-group3">
+                <label class="col-label-sm">Erabiltzailea: </label>
+                <input
+                  type="text"
+                  id="erabiltzailea"
+                  class="form-control form-control-sm"
+                  placeholder="Erabiltzailea"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label class="col-label-sm">Pasahitza: </label>
+                <input
+                  type="password"
+                  id="pasahitza"
+                  class="form-control form-control-sm"
+                  placeholder="Pasahitza"
+                  required
+                />
+              </div>
+        </form>
+        <input
+        id="botoia"
+        type="submit"
+        class="btn btn-primary"
+        value="Erregistratu"
+    />
+        <p id="text"></p>
+
+        <table class="table">
+            <thead>
+                <th scope="col">Erabiltzailea</th>
+                <th scope="col">Pasahitza</th>
+            </thead>
+            <tbody id="taula">
+                
+            </tbody>
+        </table>
+    </div>
+    <script src="scripta.js"></script>
+</body>
+</html>

@@ -57,4 +57,22 @@
     
     {% block javascript %}
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $('#erosketa_egin').click(function(e){
+          $.ajax({
+            url: "{% url 'buy/kar.id' %}",
+            type: 'DELETE',
+            success: function(result) {
+              alert('Erosketa egin da');
+            },
+            error: function(result){
+              alert('Arazo bat egon da erosketa egitean');
+            }
+          });
+        })
+        
+      })
+    </script>
     {% endblock javascript %}
