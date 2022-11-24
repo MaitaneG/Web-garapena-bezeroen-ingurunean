@@ -1,18 +1,33 @@
-<p>nire-osagaia works!</p>
-10 + 20 = {{10 + 20}}
-<div>
+<div class="container">
+    <p>nire-osagaia works!</p>
+    10 + 20 = {{10 + 20}}
     <div>
-    Izena: {{langilea.izena}}
-    </div>
-    <div>
-    Abizena: {{langilea.abizena}}
-    </div>
-    <div>
-    Generoa: {{langilea.generoa}}
+        <h2>{{ getTitle() }} </h2>
+        <input [(ngModel)]="langilea.izena"> 
+        <input [(ngModel)]="langilea.abizena">
+    
+        <table class="table"> 
+            <tbody> 
+                <input type="number" step="1" min="0" max="4" [(ngModel)]="rowLimit" />
+                <tr *ngFor="let langilea of langileak | slice:0:rowLimit"> 
+                    <td>{{langilea.izena | uppercase}}</td> 
+                    <td>{{langilea.abizena | uppercase}}</td> 
+                    <td>{{langilea.generoa | lowercase}}</td> 
+                    <td> <span class="badge" [ngClass]="langilea.soldata>= 1999 ? 'bg-primary' : (langilea.soldata == 1000 ? 'bg-danger' : 'bg-warning')"> {{langilea.soldata}} </span> </td>
+                    <td>{{langilea.likes}}</td> 
+                    <td><input type="button" value="Like" (click)="gehituLikes(langilea)" /> </td>
+                    <td><input type="button" value="Kontaktatu" [disabled]="!langilea.lanean" /></td> 
+                </tr> 
+            </tbody> 
+        </table>
+    
+        <div>
+            <img [src]="langilea.irudia">
+            <img src="{{langilea.irudia}}">
+        </div>
     </div>
 
-    <div>
-        <img [src]="langilea.irudia">
-        <img src="{{langilea.irudia}}">
-        </div>
+    <div > <p [innerHTML]="myText"></p> </div>
+
 </div>
+
