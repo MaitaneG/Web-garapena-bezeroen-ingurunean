@@ -1,22 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { KlubaService} from '../services/kluba.service';
+import { Kluba } from '../interfaces/kluba';
 
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss']
 })
-export class Tab1Page {
+export class Tab1Page implements OnInit{
+  klubak: Kluba[] = [];
+  showLoader: boolean;
 
-  constructor() {}
+  constructor(private klubaService: KlubaService) {
+    this.showLoader = true;
+  }
 
-  kluba = {
-    id: 783189,
-    name: 'uni eibar',
-    cover_photo_small: 'assets/img/klubadaw2.jpg',
-    sport_type: 'running',
-    private: true,
-    member_count: 3,
-    description: 'Lanbide Heziketako Ikastetxea',
-    club_type: 'company',
-    };
+  getKlubak(): void{
+    this.klubaService.getKlubak()
+    .subscribe(data => {this.klubak = data; 
+    this.showLoader=false},
+    error => console.log('Error::' + error)); }
+
+    ngOnInit(){
+      this.getKlubak();
+      }
 }
