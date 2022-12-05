@@ -15,4 +15,8 @@ export class KlubaService {
   getKlubak(): Observable<Kluba[]> {
     return this.http.get<Kluba[]>(this.url);
   }
+
+  getKluba(id: number): Observable<Kluba> {
+    return this.http.get<Kluba>(this.url + '/' + id);
+   }
 }

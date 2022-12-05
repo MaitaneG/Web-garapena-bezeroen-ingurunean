@@ -23,7 +23,12 @@ const routes: Routes = [
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'
-      }
+      },
+      {
+        path: 'klubak/kluba/:id',
+        loadChildren: () => import('../tab1-jarduerak/tab1-jarduerak.module').then(m =>
+       m.Tab1JarduerakPageModule)
+        },
     ]
   },
   {
