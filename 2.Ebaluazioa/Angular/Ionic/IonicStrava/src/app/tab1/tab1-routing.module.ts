@@ -6,7 +6,12 @@ const routes: Routes = [
   {
     path: '',
     component: Tab1Page,
-  }
+  },
+  {
+    path: 'kluba/:id',
+    loadChildren: () => import('../tab1-jarduerak/tab1-jarduerak.module').then(m =>
+   m.Tab1JarduerakPageModule)
+    },
 ];
 
 @NgModule({

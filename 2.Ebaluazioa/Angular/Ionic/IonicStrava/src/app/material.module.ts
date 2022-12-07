@@ -8,7 +8,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatIconModule} from '@angular/material/icon';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
-//import {MatDatepicker} from '@angular/material/datepicker';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 //import {MatNativeDateModule} from '@angular/material/core';
 
 
@@ -23,7 +23,7 @@ import {MatSortModule} from '@angular/material/sort';
     MatSelectModule,
     MatPaginatorModule,
     MatSortModule, 
-    /*MatDatepicker,*/
+    MatDatepickerModule,
     /*MatNativeDateModule*/
   ]
 })
